@@ -1,12 +1,12 @@
-# Project setting with Bootstrap grid
+# Project setting
 Local settings for my projects with Sass, ITCSS, BEM, Grunt, Bootstrap-grid, Modern-normalize.css
-
-## Local development server
+## Setup
+# Local development server
 In root folder:
 1. Install dependencies ```npm install```
 2. Run Grunt with command ```grunt```
 
-## Requires
+# Requires
 - npm >= 6.9.0
 - Grunt >= 1.1.0
 
