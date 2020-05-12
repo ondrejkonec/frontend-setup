@@ -1,0 +1,15 @@
+// =========================================================================
+// 03 - GENERIC - bootstrap-grid.scss
+// =========================================================================
+
+
+// Import from node_modules for Bootstrap grid
+//--------------------------------------------------------------------------
+  
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins/clearfix";
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../../../node_modules/bootstrap/scss/mixins/grid-framework";
+@import "../../../node_modules/bootstrap/scss/mixins/grid";
+@import "../../../node_modules/bootstrap/scss/grid";
+  

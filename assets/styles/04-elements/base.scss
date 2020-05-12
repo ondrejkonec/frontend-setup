@@ -1,0 +1,42 @@
+// =========================================================================
+// 04 - ELEMETNS - base.scss
+// =========================================================================
+
+@at-root {
+  @-ms-viewport { width: device-width; }
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
