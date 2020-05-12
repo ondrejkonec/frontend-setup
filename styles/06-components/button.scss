@@ -1,0 +1,78 @@
+/* ============================================================================
+   05 - COMPONENTS - Button.scss
+   ========================================================================= */
+/**
+ * Short component description
+ */
+
+/* Component structure
+
+ .Button
+ .Button__icon
+ .Button__text
+ .Button--circle
+ .Button--rounded
+ .Button.is-open
+ .Button.has-icon
+
+ */
+
+// Component local variables
+//--------------------------------------------------------------------------
+$button-padding: 8px;
+$button-border-radius: 4px;
+
+// Block
+//--------------------------------------------------------------------------
+.Button {
+  padding: $button-padding;
+  @include respond(sm) {
+    padding: $button-padding * 2;
+  }
+  @include respond(md) {
+    padding: $button-padding * 3;
+  }
+  @include respond(lg) {
+    padding: $button-padding * 4;
+  }
+  @include respond(xl) {
+    padding: $button-padding * 5;
+  }
+  @include respond(xxl) {
+    padding: $button-padding * 6;
+  }
+  &:hover {
+    color: blue;
+    @include respond(lg) {
+      color: red;
+    }
+  }
+  .is-open {
+    height: auto;
+  }
+  .has-icon {
+    padding: $button-padding / 2;
+  }
+}
+
+// Elements
+//--------------------------------------------------------------------------
+.Button {
+  &__icon {
+    max-width: 40px;
+  }
+  &__text {
+    font-size: 16px;
+  }
+}
+
+// Elements
+//--------------------------------------------------------------------------
+.Button {
+  &--circle {
+    border-radius: 100px;
+  }
+  &--rounded {
+    border-radius: 10px;
+  }
+}

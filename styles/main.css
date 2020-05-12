@@ -1676,6 +1676,75 @@ img {
 /* 06 - Components
  * UI components
 */
+/* ============================================================================
+   05 - COMPONENTS - Button.scss
+   ========================================================================= */
+/**
+ * Short component description
+ */
+/* Component structure
+
+ .Button
+ .Button__icon
+ .Button__text
+ .Button--circle
+ .Button--rounded
+ .Button.is-open
+ .Button.has-icon
+
+ */
+.Button {
+  padding: 8px;
+}
+@media (min-width: 576px) {
+  .Button {
+    padding: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .Button {
+    padding: 24px;
+  }
+}
+@media (min-width: 992px) {
+  .Button {
+    padding: 32px;
+  }
+}
+@media (min-width: 1200px) {
+  .Button {
+    padding: 40px;
+  }
+}
+.Button:hover {
+  color: blue;
+}
+@media (min-width: 992px) {
+  .Button:hover {
+    color: red;
+  }
+}
+.Button .is-open {
+  height: auto;
+}
+.Button .has-icon {
+  padding: 4px;
+}
+
+.Button__icon {
+  max-width: 40px;
+}
+.Button__text {
+  font-size: 16px;
+}
+
+.Button--circle {
+  border-radius: 100px;
+}
+.Button--rounded {
+  border-radius: 10px;
+}
+
 /* 07 - Utilities
  * Ability to override anything.
  * It will most likely come with !important as we are sure to use them.
