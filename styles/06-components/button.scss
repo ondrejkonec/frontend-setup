@@ -2,63 +2,78 @@
    05 - COMPONENTS - Button.scss
    ========================================================================= */
 /**
- * Short component description
+ * Short component description. Components are designed with Mobile First idea
  */
 
 /* Component structure
 
- .Button
- 
- .Button__prefix
- .Button__body
- .Button__suffix
+  .Button
 
- .Button--small
- .Button--medium
- .Button--large
+  .Button__content
+  .Button__icon
+  .Button__image
+  .Button__body
 
- .Button.is-open
- .Button.has-icon
+  .Button--small
+  .Button--medium
+  .Button--large
+
+  .Button.is-open
+  .Button.has-icon
 
  */
 
 // Component local variables
 //--------------------------------------------------------------------------
-$button-padding: 4px;
-$button-border-radius: 4px;
+$button-padding: 0.25em;
 
 // Block
 //--------------------------------------------------------------------------
 .button {
-  padding: $button-padding;
+  position: relative;
+  display: table;
+  margin: auto;
+  padding: 0.5em 0.85em;
+  border-radius: 4px;
+  background: $primary-normal;
+  color: $white;
+  font-weight: $fw-bold;
+  text-decoration: none;
+  transition: background 0.5s ease;
 
+  // Mobile-first responsive component changes
   @include respond(sm) {
-    font-size: 1rem;
-    padding: $button-padding * 2;
+    padding: 0.75em $button-padding * 2;
   }
   @include respond(md) {
-    font-size: 1.25rem;
-    padding: $button-padding * 3;
+    padding: 1em $button-padding * 3;
   }
   @include respond(lg) {
-    font-size: 1.5rem;
-    padding: $button-padding * 4;
+    padding: 1.25em $button-padding * 4;
   }
   @include respond(xl) {
-    font-size: 1.75rem;
-    padding: $button-padding * 5;
+    padding: 1.5em $button-padding * 5;
   }
   @include respond(xxl) {
-    font-size: 2rem;
-    padding: $button-padding * 6;
+    padding: 1.75em $button-padding * 6;
   }
 
-  &:hover {
-    color: burlywood;
-    @include respond(lg) {
-      color: coral;
-    }
+  // Pseudo elements (::before, ::after and all others)
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -10px;
+    left: 0;
+    background: $primary-light;
   }
+
+  // hover, active, focus and other states
+  &:hover {
+    background: $primary-dark;
+  }
+
   // States based on SMACSS
   &.is-open {
     height: auto;
@@ -71,14 +86,45 @@ $button-border-radius: 4px;
 // Elements
 //--------------------------------------------------------------------------
 .button {
-  &__prefix {
-    max-width: 40px;
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    padding-right: 0.5em;
+  }
+  &__image {
+    display: block;
+    max-width: 25px;
+
+    @include respond(sm) {
+      max-width: 35px;
+    }
+    @include respond(md) {
+      max-width: 45px;
+    }
+    @include respond(lg) {
+      max-width: 55px;
+    }
+    @include respond(xl) {
+      max-width: 65px;
+    }
   }
   &__body {
     font-size: 1rem;
-  }
-  &__suffix {
-    display: grid;
+
+    @include respond(sm) {
+      font-size: 1.25rem;
+    }
+    @include respond(md) {
+      font-size: 1.5rem;
+    }
+    @include respond(lg) {
+      font-size: 1.75rem;
+    }
+    @include respond(xl) {
+      font-size: 2rem;
+    }
   }
 }
 
@@ -88,23 +134,17 @@ $button-border-radius: 4px;
   $block: &;
 
   &--small {
-    padding: .25em .5em;
-    font-size: .75rem;
+    padding: 0.25em 0.5em;
+    font-size: 0.75rem;
 
-    #{$block}__prefix {
-      max-width: 20px;
+    #{$block}__icon {
+      padding-right: 0.25em;
     }
   }
   &--medium {
-    padding: .5em .75em;
-    font-size: .875rem;
-
-    @include respond(sm) {
-      font-size: 1rem;
-    }
+    // property: value;
   }
   &--large {
-    padding: .75em 1em;
-    font-size: 1rem;
+    // property: value;
   }
 }

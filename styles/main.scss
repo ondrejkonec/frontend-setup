@@ -16,9 +16,11 @@
    * Design tokens for UI
    * Variables, config
 */
-@import "01-settings/config";
+@import "01-settings/color-settings";
 @import "01-settings/grid-settings";
 @import "01-settings/spacing-settings";
+
+@import "01-settings/config";
 
 
 /* 02 - Tools

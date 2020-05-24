@@ -2,9 +2,27 @@
 // 01 - SETTINGS - spacing-settings.scss
 // =========================================================================
 
-// Variable setings
-// 
-// Spacing is based on 4px spacing using which is multiplied
+/*
+  Spacing variable setings 
+
+  Spacing is based on 4px spacing using which is multiplied
+*/
+
+// Spacing units for all web components
+//--------------------------------------------------------------------------
+$spacing-1:  4px !default;
+$spacing-2:  8px !default;
+$spacing-3:  12px !default;
+$spacing-4:  16px !default;
+$spacing-5:  20px !default;
+$spacing-6:  24px !default;
+$spacing-7:  28px !default;
+$spacing-8:  32px !default;
+$spacing-9:  36px !default;
+$spacing-10: 40px !default;
+
+
+// Spacing settings for utility mixin (mt-1, pl-lg-2 etc.)
 //--------------------------------------------------------------------------
 $spacer:   4px !default;
 $spacer-x: $spacer !default;

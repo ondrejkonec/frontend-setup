@@ -11,6 +11,15 @@
    * Design tokens for UI
    * Variables, config
 */
+/*
+  Complete pallete with all basic colors sets from 0 to 1000 according to the shade.
+  Adding new color is allowed by adding at least value 50 (gray-650, gray-900)
+*/
+/*
+  Spacing variable setings 
+
+  Spacing is based on 4px spacing using which is multiplied
+*/
 /* 02 - Tools
  * Globally used functions, placeholders and mixins.
 */
@@ -4612,97 +4621,140 @@ img {
    05 - COMPONENTS - Button.scss
    ========================================================================= */
 /**
- * Short component description
+ * Short component description. Components are designed with Mobile First idea
  */
 /* Component structure
 
- .Button
+  .Button
 
- .Button__prefix
- .Button__body
- .Button__suffix
+  .Button__content
+  .Button__icon
+  .Button__image
+  .Button__body
 
- .Button--small
- .Button--medium
- .Button--large
+  .Button--small
+  .Button--medium
+  .Button--large
 
- .Button.is-open
- .Button.has-icon
+  .Button.is-open
+  .Button.has-icon
 
  */
 .button {
-  padding: 4px;
+  position: relative;
+  display: table;
+  margin: auto;
+  padding: 0.5em 0.85em;
+  border-radius: 4px;
+  background: #0084ff;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.5s ease;
 }
 @media (min-width: 576px) {
   .button {
-    font-size: 1rem;
-    padding: 8px;
+    padding: 0.75em 0.5em;
   }
 }
 @media (min-width: 768px) {
   .button {
-    font-size: 1.25rem;
-    padding: 12px;
+    padding: 1em 0.75em;
   }
 }
 @media (min-width: 992px) {
   .button {
-    font-size: 1.5rem;
-    padding: 16px;
+    padding: 1.25em 1em;
   }
 }
 @media (min-width: 1200px) {
   .button {
-    font-size: 1.75rem;
-    padding: 20px;
+    padding: 1.5em 1.25em;
   }
+}
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -10px;
+  left: 0;
+  background: #66b5ff;
 }
 .button:hover {
-  color: burlywood;
-}
-@media (min-width: 992px) {
-  .button:hover {
-    color: coral;
-  }
+  background: #004a94;
 }
 .button.is-open {
   height: auto;
 }
 .button.has-icon {
-  padding: 2px;
+  padding: 0.125em;
 }
 
-.button__prefix {
-  max-width: 40px;
+.button__content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.button__icon {
+  padding-right: 0.5em;
+}
+.button__image {
+  display: block;
+  max-width: 25px;
+}
+@media (min-width: 576px) {
+  .button__image {
+    max-width: 35px;
+  }
+}
+@media (min-width: 768px) {
+  .button__image {
+    max-width: 45px;
+  }
+}
+@media (min-width: 992px) {
+  .button__image {
+    max-width: 55px;
+  }
+}
+@media (min-width: 1200px) {
+  .button__image {
+    max-width: 65px;
+  }
 }
 .button__body {
   font-size: 1rem;
 }
-.button__suffix {
-  display: grid;
+@media (min-width: 576px) {
+  .button__body {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .button__body {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .button__body {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 1200px) {
+  .button__body {
+    font-size: 2rem;
+  }
 }
 
 .button--small {
   padding: 0.25em 0.5em;
   font-size: 0.75rem;
 }
-.button--small .button__prefix {
-  max-width: 20px;
+.button--small .button__icon {
+  padding-right: 0.25em;
 }
-.button--medium {
-  padding: 0.5em 0.75em;
-  font-size: 0.875rem;
-}
-@media (min-width: 576px) {
-  .button--medium {
-    font-size: 1rem;
-  }
-}
-.button--large {
-  padding: 0.75em 1em;
-  font-size: 1rem;
-}
-
 /* 07 - Utilities
  * Ability to override anything.
  * It will most likely come with !important as we are sure to use them.

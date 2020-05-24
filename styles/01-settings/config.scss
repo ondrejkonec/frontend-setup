@@ -2,8 +2,56 @@
 // 02 - SETTINGS - config.scss
 // =========================================================================
 
+
 // Colors
 //--------------------------------------------------------------------------
 
-// Fonts
+// Base colors
+$black: #000 !default;
+$white: #fff !default;
+
+// Primary brand color
+$primary-lighter:   hsl(209, 100%, 85%) !default;
+$primary-light:     hsl(209, 100%, 70%) !default;
+$primary-normal:    hsl(209, 100%, 50%) !default;
+$primary-dark:      hsl(210, 100%, 29%) !default;
+$primary-darker:    hsl(206, 100%, 19%) !default;
+
+// Neutral feeling
+$neutral-light:     hsl(0, 0%, 85%) !default;
+$neutral-light:     hsl(96, 4%, 53%) !default;
+$neutral-normal:    hsl(0, 0%, 35%) !default;
+$neutral-dark:      hsl(210, 10%, 23%) !default;
+$neutral-darker:    hsl(210, 4%, 19%) !default;
+
+// Positive feeling
+$positive-light:    hsl(168, 56%, 87%) !default;
+$positive-normal:   hsl(168, 57%, 50%) !default;
+
+// Info or warning feeling
+$info-light:        hsl(41, 99%, 67%) !default;
+$info-normal:       hsl(36, 100%, 59%) !default;
+
+// Negative or error feeling
+$negative-light:    hsl(6, 100%, 65%) !default;
+$negative-normal:   hsl(350, 100%, 62%) !default;
+
+// Additional or extra feeling
+$additional-light:  hsl(288, 62%, 81%) !default;
+$additional-normal: hsl(288, 63%, 58%) !default;
+$additional-dark:   hsl(288, 100%, 39%) !default;
+
+
+// Fonts weight variables
 //--------------------------------------------------------------------------
+$fw-thin: 100;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+$fw-black: 900;
+
+// Path's to assets
+//--------------------------------------------------------------------------
+$svg-base: '../svg/';
+$img-base: '../images/';
