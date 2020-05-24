@@ -4627,10 +4627,9 @@ img {
 
   .Button
 
-  .Button__content
   .Button__icon
-  .Button__image
   .Button__body
+  .Button__append
 
   .Button--small
   .Button--medium
@@ -4691,61 +4690,14 @@ img {
   padding: 0.125em;
 }
 
-.button__content {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-}
 .button__icon {
   padding-right: 0.5em;
-}
-.button__image {
-  display: block;
-  max-width: 25px;
-}
-@media (min-width: 576px) {
-  .button__image {
-    max-width: 35px;
-  }
-}
-@media (min-width: 768px) {
-  .button__image {
-    max-width: 45px;
-  }
-}
-@media (min-width: 992px) {
-  .button__image {
-    max-width: 55px;
-  }
-}
-@media (min-width: 1200px) {
-  .button__image {
-    max-width: 65px;
-  }
 }
 .button__body {
   font-size: 1rem;
 }
-@media (min-width: 576px) {
-  .button__body {
-    font-size: 1.25rem;
-  }
-}
-@media (min-width: 768px) {
-  .button__body {
-    font-size: 1.5rem;
-  }
-}
-@media (min-width: 992px) {
-  .button__body {
-    font-size: 1.75rem;
-  }
-}
-@media (min-width: 1200px) {
-  .button__body {
-    font-size: 2rem;
-  }
+.button__append {
+  padding-left: 0.5em;
 }
 
 .button--small {
@@ -4755,6 +4707,15 @@ img {
 .button--small .button__icon {
   padding-right: 0.25em;
 }
+.button--medium {
+  padding: 0.5em 0.75em;
+  font-size: 0.875rem;
+}
+.button--large {
+  padding: 0.75em 1em;
+  font-size: 1rem;
+}
+
 /* 07 - Utilities
  * Ability to override anything.
  * It will most likely come with !important as we are sure to use them.

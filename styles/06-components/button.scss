@@ -9,10 +9,9 @@
 
   .Button
 
-  .Button__content
   .Button__icon
-  .Button__image
   .Button__body
+  .Button__append
 
   .Button--small
   .Button--medium
@@ -33,7 +32,7 @@ $button-padding: 0.25em;
   position: relative;
   display: table;
   margin: auto;
-  padding: 0.5em 0.85em;
+  padding: .5em .85em;
   border-radius: 4px;
   background: $primary-normal;
   color: $white;
@@ -43,7 +42,7 @@ $button-padding: 0.25em;
 
   // Mobile-first responsive component changes
   @include respond(sm) {
-    padding: 0.75em $button-padding * 2;
+    padding: .75em $button-padding * 2;
   }
   @include respond(md) {
     padding: 1em $button-padding * 3;
@@ -60,7 +59,7 @@ $button-padding: 0.25em;
 
   // Pseudo elements (::before, ::after and all others)
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 1px;
@@ -86,46 +85,17 @@ $button-padding: 0.25em;
 // Elements
 //--------------------------------------------------------------------------
 .button {
-  &__content {
-    display: flex;
-    align-items: center;
-  }
-  &__icon {
-    padding-right: 0.5em;
-  }
-  &__image {
-    display: block;
-    max-width: 25px;
 
-    @include respond(sm) {
-      max-width: 35px;
-    }
-    @include respond(md) {
-      max-width: 45px;
-    }
-    @include respond(lg) {
-      max-width: 55px;
-    }
-    @include respond(xl) {
-      max-width: 65px;
-    }
+  &__icon {
+    padding-right: .5em;
   }
   &__body {
     font-size: 1rem;
-
-    @include respond(sm) {
-      font-size: 1.25rem;
-    }
-    @include respond(md) {
-      font-size: 1.5rem;
-    }
-    @include respond(lg) {
-      font-size: 1.75rem;
-    }
-    @include respond(xl) {
-      font-size: 2rem;
-    }
   }
+  &__append {
+    padding-left: .5em;
+  }
+
 }
 
 // Modifiers
@@ -134,17 +104,20 @@ $button-padding: 0.25em;
   $block: &;
 
   &--small {
-    padding: 0.25em 0.5em;
-    font-size: 0.75rem;
+    padding: .25em .5em;
+    font-size: .75rem;
 
+    // Modifier of element
     #{$block}__icon {
-      padding-right: 0.25em;
+      padding-right: .25em;
     }
   }
   &--medium {
-    // property: value;
+    padding: .5em .75em;
+    font-size: .875rem;
   }
   &--large {
-    // property: value;
+    padding: .75em 1em;
+    font-size: 1rem;
   }
 }
