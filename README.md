@@ -1,5 +1,5 @@
 # Project setting
-Local settings for my projects with Sass, ITCSS, BEM, Grunt, Bootstrap-grid, Modern-normalize.css
+Local settings for my projects with Sass, ITCSS, BEM, SMACSS, Grunt, Bootstrap's grid/spacing and display utilities, Modern-normalize.css
 ## Setup
 ### Local development server
 In root folder:
