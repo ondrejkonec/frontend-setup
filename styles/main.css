@@ -4617,64 +4617,90 @@ img {
 /* Component structure
 
  .Button
- .Button__icon
- .Button__text
- .Button--circle
- .Button--rounded
+
+ .Button__prefix
+ .Button__body
+ .Button__suffix
+
+ .Button--small
+ .Button--medium
+ .Button--large
+
  .Button.is-open
  .Button.has-icon
 
  */
-.Button {
-  padding: 8px;
+.button {
+  padding: 4px;
 }
 @media (min-width: 576px) {
-  .Button {
-    padding: 16px;
+  .button {
+    font-size: 1rem;
+    padding: 8px;
   }
 }
 @media (min-width: 768px) {
-  .Button {
-    padding: 24px;
+  .button {
+    font-size: 1.25rem;
+    padding: 12px;
   }
 }
 @media (min-width: 992px) {
-  .Button {
-    padding: 32px;
+  .button {
+    font-size: 1.5rem;
+    padding: 16px;
   }
 }
 @media (min-width: 1200px) {
-  .Button {
-    padding: 40px;
+  .button {
+    font-size: 1.75rem;
+    padding: 20px;
   }
 }
-.Button:hover {
-  color: blue;
+.button:hover {
+  color: burlywood;
 }
 @media (min-width: 992px) {
-  .Button:hover {
-    color: red;
+  .button:hover {
+    color: coral;
   }
 }
-.Button .is-open {
+.button.is-open {
   height: auto;
 }
-.Button .has-icon {
-  padding: 4px;
+.button.has-icon {
+  padding: 2px;
 }
 
-.Button__icon {
+.button__prefix {
   max-width: 40px;
 }
-.Button__text {
-  font-size: 16px;
+.button__body {
+  font-size: 1rem;
+}
+.button__suffix {
+  display: grid;
 }
 
-.Button--circle {
-  border-radius: 100px;
+.button--small {
+  padding: 0.25em 0.5em;
+  font-size: 0.75rem;
 }
-.Button--rounded {
-  border-radius: 10px;
+.button--small .button__prefix {
+  max-width: 20px;
+}
+.button--medium {
+  padding: 0.5em 0.75em;
+  font-size: 0.875rem;
+}
+@media (min-width: 576px) {
+  .button--medium {
+    font-size: 1rem;
+  }
+}
+.button--large {
+  padding: 0.75em 1em;
+  font-size: 1rem;
 }
 
 /* 07 - Utilities
