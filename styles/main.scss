@@ -16,11 +16,10 @@
    * Design tokens for UI
    * Variables, config
 */
-@import "01-settings/color-settings";
+@import "01-settings/foundations";
 @import "01-settings/grid-settings";
-@import "01-settings/spacing-settings";
-
-@import "01-settings/config";
+@import "01-settings/grid-functions";
+@import "01-settings/utilities-settings";
 
 
 /* 02 - Tools
@@ -33,7 +32,6 @@
  * 3rd party vendors including Normalize, Reset, *
  * This is the first layer which generates actual CSS.
 */
-@import "03-generic/bootstrap";
 @import "03-generic/normalize";
 
 
@@ -49,7 +47,7 @@
  * for example, grid layout, media object or container.
  * Cosemetic-free design patterns
 */
-@import "05-objects/foo";
+@import "05-objects/layout";
 
 
 /* 06 - Components
@@ -62,4 +60,7 @@
  * Ability to override anything.
  * It will most likely come with !important as we are sure to use them.
 */
-@import "07-utilities/foo";
+@import "07-utilities/display";
+@import "07-utilities/flex";
+@import "07-utilities/sizing";
+@import "07-utilities/spacing";
