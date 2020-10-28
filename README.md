@@ -40,9 +40,9 @@ Class-based selectors which define undecorated design patterns.
 
 ### 06 - Components
 - 3 groups: atoms, molecules and organisms
-- - atoms: the smallest building blocks of a website, can't contain any other component
-- - molecules: simple groups of UI elements functioning together as a unit
-- - organisms: complex UI components composed of groups of molecules and/or atoms and/or other organisms
+  - atoms: the smallest building blocks of a website, can't contain any other component
+  - molecules: simple groups of UI elements functioning together as a unit
+  - organisms: complex UI components composed of groups of molecules and/or atoms and/or other organisms
 - Designed pieces of UI
 - Still only using classes
 - More explicitly named
