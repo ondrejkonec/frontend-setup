@@ -30,7 +30,6 @@
     border: 1px solid #ccc; // overriding default Input component
   }
   &__button {
-    background: #ddd; // overiding default Button component
     margin-left: .5em; // adding new rule for Button, but has effect only in context of this pattern
   }
 }
