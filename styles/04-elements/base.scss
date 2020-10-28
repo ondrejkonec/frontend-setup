@@ -1,17 +1,17 @@
 // =========================================================================
-// 04 - ELEMETNS - base.scss
+// BASE ELEMENTS
 // =========================================================================
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 @at-root {
   @-ms-viewport {
     width: device-width;
   }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {

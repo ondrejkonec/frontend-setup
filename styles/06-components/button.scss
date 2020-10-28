@@ -1,5 +1,5 @@
 /* ============================================================================
-   05 - COMPONENTS - Button.scss
+   Button
    ========================================================================= */
 /**
  * Short component description. Components are designed with Mobile First idea
@@ -7,18 +7,17 @@
 
 /* Component structure
 
-  .Button
+  .c-button
 
-  .Button__icon
-  .Button__body
-  .Button__append
+  .c-button__icon
+  .c-button__body
+  .c-button__append
 
-  .Button--small
-  .Button--medium
-  .Button--large
+  .c-button--small
+  .c-button--medium
+  .c-button--large
 
-  .Button.is-open
-  .Button.has-icon
+  .c-button.is-active
 
  */
 
@@ -28,10 +27,9 @@ $button-padding: 0.25em;
 
 // Block
 //--------------------------------------------------------------------------
-.button {
+.c-button {
   // declarations
   padding: $button-padding;
-
 
   // Mobile-first responsive component changes
   @include media-breakpoint-up(sm) {
@@ -54,39 +52,33 @@ $button-padding: 0.25em;
   }
 
   // States based on SMACSS
-  &.is-opened {
-    height: auto;
+  &.is-active {
   }
 }
 
 // Elements
 //--------------------------------------------------------------------------
-.button {
-
+.c-button {
   &__icon {
   }
   &__body {
   }
   &__append {
   }
-
 }
 
 // Modifiers
 //--------------------------------------------------------------------------
-.button {
+.c-button {
   $block: &;
 
   &--small {
-
-    // Modifier of element
     #{$block}__icon {
-      padding-right: .25em;
+      padding-right: 0.25em;
     }
   }
   &--medium {
   }
   &--large {
-
   }
 }

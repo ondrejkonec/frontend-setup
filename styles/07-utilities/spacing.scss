@@ -1,5 +1,5 @@
 // =========================================================================
-// 07 - UTILITIES - spacing.scss
+// UTILITIES - SPACING
 // =========================================================================
 
 /*
@@ -12,7 +12,7 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    @each $prop, $abbrev in (margin: m, padding: p) {
+    @each $prop, $abbrev in (margin: u-m, padding: u-p) {
       @each $size, $length in $spacers {
         .#{$abbrev}#{$infix}-#{$size} {
           #{$prop}: $length !important;
@@ -37,23 +37,23 @@
     }
 
     // Some special margin utils
-    .m#{$infix}-auto {
+    .u-m#{$infix}-auto {
       margin: auto !important;
     }
-    .mt#{$infix}-auto,
-    .my#{$infix}-auto {
+    .u-mt#{$infix}-auto,
+    .u-my#{$infix}-auto {
       margin-top: auto !important;
     }
-    .mr#{$infix}-auto,
-    .mx#{$infix}-auto {
+    .u-mr#{$infix}-auto,
+    .u-mx#{$infix}-auto {
       margin-right: auto !important;
     }
-    .mb#{$infix}-auto,
-    .my#{$infix}-auto {
+    .u-mb#{$infix}-auto,
+    .u-my#{$infix}-auto {
       margin-bottom: auto !important;
     }
-    .ml#{$infix}-auto,
-    .mx#{$infix}-auto {
+    .u-ml#{$infix}-auto,
+    .u-mx#{$infix}-auto {
       margin-left: auto !important;
     }
   }

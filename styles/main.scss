@@ -17,21 +17,21 @@
    * Variables, config
 */
 @import "01-settings/foundations";
-@import "01-settings/grid-settings";
-@import "01-settings/grid-functions";
-@import "01-settings/utilities-settings";
 
 
 /* 02 - Tools
  * Globally used functions, placeholders and mixins.
 */
-@import "02-tools/mixins";
+@import "02-tools/grid-settings";
+@import "02-tools/grid-functions";
+@import "02-tools/utilities-settings";
 
 
 /* 03 - Generic (Vendors)
  * 3rd party vendors including Normalize, Reset, *
  * This is the first layer which generates actual CSS.
 */
+@import "03-generic/reset";
 @import "03-generic/normalize";
 
 
@@ -40,6 +40,7 @@
  * These come with default styling from the browser so we can redefine them here.
 */
 @import "04-elements/base";
+@import "04-elements/typography";
 
 
 /* 05 - Objects
