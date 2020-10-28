@@ -1655,12 +1655,32 @@ p {
  */
 /* Pattern structure
 
- .p-header
- .p-header__logo
- .p-header__menu (.c-menu)
- .p-header__button (.c-button--secondary)
+  .p-header
+  .p-header__logo
+  .p-header__menu (.c-menu)
+  .p-header__button (.c-button--secondary)
 
-*/
+ */
+.p-header {
+  display: block;
+}
+
+.p-header__logo {
+  max-height: 80px;
+}
+.p-header__menu {
+  margin: 10px 0;
+}
+.p-header__menu .c-menu {
+  color: black;
+}
+.p-header__button {
+  padding: 2px 8px;
+}
+.p-header__button .c-menu {
+  color: black;
+}
+
 /* 08 - Utilities
  * Ability to override anything.
  * It will most likely come with !important as we are sure to use them.

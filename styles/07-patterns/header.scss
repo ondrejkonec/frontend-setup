@@ -6,7 +6,7 @@
  * Short pattern description. Header is typical pattern, that contains few components.
  */
 
- /* Pattern structure
+/* Pattern structure
 
   .p-header
   .p-header__logo
@@ -14,3 +14,29 @@
   .p-header__button (.c-button--secondary)
 
  */
+
+// Block
+//--------------------------------------------------------------------------
+.p-header {
+  display: block;
+}
+
+// Block
+//--------------------------------------------------------------------------
+.p-header {
+  &__logo {
+    max-height: 80px;
+  }
+  &__menu {
+    margin: 10px 0;
+    & .c-menu {
+      color: black;
+    }
+  }
+  &__button {
+    padding: 2px 8px; // adding new declarations need for header pattern
+    & .c-menu {
+      color: black; // changing declaration - overriding default button color
+    }
+  }
+}
