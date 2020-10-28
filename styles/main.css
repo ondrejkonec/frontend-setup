@@ -1606,6 +1606,7 @@ p {
  * Class-based selectors which define undecorated design patterns,
  * for example, grid layout, media object or container.
  * Cosemetic-free design patterns
+ * namespace: .l-
 */
 .l-layout {
   max-width: 90vw;
@@ -1613,6 +1614,7 @@ p {
 
 /* 06 - Components
  * UI components
+ * namespace: .c-
 */
 /* ============================================================================
    Button
@@ -1641,7 +1643,25 @@ p {
 .c-button--small .c-button__icon {
   padding-right: 0.25em;
 }
-/* 07 - Utilities
+/* 07 - Patterns
+ * More components together, that we can call pattern
+ * namespace: .p-
+*/
+/* ============================================================================
+   Header
+   ========================================================================= */
+/**
+ * Short pattern description. Header is typical pattern, that contains few components.
+ */
+/* Pattern structure
+
+ .p-header
+ .p-header__logo
+ .p-header__menu (.c-menu)
+ .p-header__button (.c-button--secondary)
+
+*/
+/* 08 - Utilities
  * Ability to override anything.
  * It will most likely come with !important as we are sure to use them.
 */
