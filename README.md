@@ -47,6 +47,10 @@ Class-based selectors which define undecorated design patterns.
 - Still only using classes
 - More explicitly named
 
+### 07 - Scopes
+- Scoped contexts in CSS solve a very specific and particular problem
+- For example areas of user-generated content, where some long-form/prose HTML has come from a CMS
+
 ### 08 - Utilities
 Ability to override anything. It will most likely come with !important as we are sure to use them.
 - Overrides, helpers, utilities
