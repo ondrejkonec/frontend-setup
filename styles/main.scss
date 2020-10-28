@@ -63,13 +63,14 @@
 @import "06-components/atoms/Button";
 @import "06-components/atoms/Input";
 @import "06-components/molecules/InputButtonBox";
+@import "06-components/organisms/Modal";
 
 /* 07 - Patterns
- * More components together, that we can call pattern
- * namespace: .p-
+ * Scoped contexts in CSS solve a very specific and particular problem
+ * For example areas of user-generated content, where some long-form/prose HTML has come from a CMS
+ * namespace: .s-
 */
-@import "07-patterns/Footer";
-@import "07-patterns/Header";
+@import "07-scopes/cms-content";
 
 
 /* 08 - Utilities

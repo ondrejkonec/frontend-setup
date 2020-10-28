@@ -47,12 +47,6 @@ Class-based selectors which define undecorated design patterns.
 - Still only using classes
 - More explicitly named
 
-### 07 - Patterns
-Collections of components. Patterns are built from components.
-- Header
-- Footer
-- Blog article
-
 ### 08 - Utilities
 Ability to override anything. It will most likely come with !important as we are sure to use them.
 - Overrides, helpers, utilities
