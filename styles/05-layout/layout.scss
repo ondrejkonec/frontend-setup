@@ -2,6 +2,13 @@
 // LAYOUT (classes starts with prefix .l-)
 // =========================================================================
 
-.l-layout {
-  max-width: 90vw;
+.l-wrap {
+  padding-left: 1em;
+  padding-right: 1em;
+
+  @include media-breakpoint-up(sm) {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
