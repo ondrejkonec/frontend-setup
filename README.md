@@ -1,5 +1,5 @@
 # Project setting
-Local settings for my projects with Sass, ITCSS, BEM, SMACSS, Grunt, Custom grid/spacing and display utilities, Modern-normalize.css
+Local settings for my projects with Sass, ITCSS, BEM, SMACSS, Grunt and Normalize/Reset.
 ## Setup
 ### Local development server
 In root folder:
