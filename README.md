@@ -1,5 +1,5 @@
 # Project setting
-Local settings for my projects with Sass, ITCSS, BEM, SMACSS, Grunt, Custom grid/spacing and display utilities, Modern-normalize.css
+Local settings for my projects with Sass, ITCSS, BEM, SMACSS, Grunt and Normalize/Reset.
 ## Setup
 ### Local development server
 In root folder:
@@ -45,6 +45,9 @@ Class-based selectors which define undecorated design patterns.
 
 ### 07 - Patterns
 Collections of components. Patterns are built from components.
+- Header
+- Footer
+- Blog article
 
 ### 08 - Utilities
 Ability to override anything. It will most likely come with !important as we are sure to use them.
