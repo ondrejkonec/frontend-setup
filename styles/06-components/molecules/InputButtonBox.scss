@@ -1,10 +1,10 @@
 /* ============================================================================
-   Input
+   InputButtonBox
    ========================================================================= */
 
 
 /**
- * Short component description. Components are designed with Mobile First idea
+ * Short molecules description.
  */
  
 
@@ -17,7 +17,9 @@
 
 // Block
 //--------------------------------------------------------------------------
-.c-Input {
-  border: 1px solid #f4f4f4;
-  height: 40px;
+.c-InputButtonBox {
+  display: flex;
+  & .c-Button {
+    margin-left: 8px;
+  }
 }

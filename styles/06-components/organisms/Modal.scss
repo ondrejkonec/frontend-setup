@@ -1,0 +1,26 @@
+/* ============================================================================
+   Modal
+   ========================================================================= */
+
+
+/**
+ * Short organism description.
+ */
+ 
+
+/* Component structure
+
+  .c-Modal
+  .c-Modal__inputBox
+
+ */
+
+
+// Block
+//--------------------------------------------------------------------------
+.c-Modal {
+  display: flex;
+  &__inputBox { // overriding molecule InputButtonBox styles or adding new ones
+    margin-top: 10px;
+  }
+}

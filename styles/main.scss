@@ -56,9 +56,13 @@
 /* 06 - Components
  * UI components
  * namespace: .c-
+ * atoms: the smallest building blocks of a website, can't contain any other component
+ * molecules: simple groups of UI elements functioning together as a unit
+ * organisms: complex UI components composed of groups of molecules and/or atoms and/or other organisms
 */
-@import "06-components/Button";
-@import "06-components/Input";
+@import "06-components/atoms/Button";
+@import "06-components/atoms/Input";
+@import "06-components/molecules/InputButtonBox";
 
 /* 07 - Patterns
  * More components together, that we can call pattern
