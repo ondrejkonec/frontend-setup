@@ -1,5 +1,5 @@
 # Project setting
-Local settings for my projects with Sass, ITCSS, BEM, SMACSS, Grunt and Normalize/Reset.
+Local settings for my projects with Sass, ITCSS, BEM, SMACSS, Atomic Design, Grunt and Normalize/Reset.
 ## Setup
 ### Local development server
 In root folder:

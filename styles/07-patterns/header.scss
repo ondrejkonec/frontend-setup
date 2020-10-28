@@ -2,41 +2,35 @@
    Header
    ========================================================================= */
 
+
 /**
- * Short pattern description. Header is typical pattern, that contains few components.
+ * Short pattern description. 
  */
+ 
 
 /* Pattern structure
 
-  .p-header
-  .p-header__logo
-  .p-header__menu (.c-menu)
-  .p-header__button (.c-button--secondary)
+  .p-Header
+  .p-Header__input
+  .p-Header__button
 
  */
 
-// Block
-//--------------------------------------------------------------------------
-.p-header {
-  display: block;
-}
 
 // Block
 //--------------------------------------------------------------------------
-.p-header {
-  &__logo {
-    max-height: 80px;
-  }
-  &__menu {
-    margin: 10px 0;
-    & .c-menu {
-      color: black;
-    }
+.p-Header {
+  display: flex;
+}
+
+// Elements
+//--------------------------------------------------------------------------
+.p-Header {
+  &__input {
+    border: 1px solid #ccc; // overriding default Input component
   }
   &__button {
-    padding: 2px 8px; // adding new declarations need for header pattern
-    & .c-menu {
-      color: black; // changing declaration - overriding default button color
-    }
+    background: #ddd; // overiding default Button component
+    margin-left: .5em; // adding new rule for Button, but has effect only in context of this pattern
   }
 }

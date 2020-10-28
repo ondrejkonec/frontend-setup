@@ -57,13 +57,15 @@
  * UI components
  * namespace: .c-
 */
-@import "06-components/button";
+@import "06-components/Button";
+@import "06-components/Input";
 
 /* 07 - Patterns
  * More components together, that we can call pattern
  * namespace: .p-
 */
-@import "07-patterns/header";
+@import "07-patterns/Footer";
+@import "07-patterns/Header";
 
 
 /* 08 - Utilities
