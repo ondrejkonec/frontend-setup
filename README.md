@@ -31,7 +31,7 @@ These come with default styling from the browser so we can redefine them here.
 - Unclassed HTML elements
 - Last layer we see type selector
 
-### 05 - Objects
+### 05 - Layout
 Class-based selectors which define undecorated design patterns.
 - OOCSS
 - Design patterns
