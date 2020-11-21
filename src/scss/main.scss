@@ -16,6 +16,7 @@
    * Design tokens for UI
    * Variables, config
 */
+@import "01-settings/box-sizing";
 @import "01-settings/foundations";
 
 
@@ -27,12 +28,12 @@
 @import "02-tools/utilities-settings";
 
 
-/* 03 - Generic (Vendors)
+/* 03 - Vendors (Generic)
  * 3rd party vendors including Normalize, Reset, *
  * This is the first layer which generates actual CSS.
 */
-@import "03-generic/reset";
-@import "03-generic/normalize";
+@import "03-vendors/reset";
+@import "03-vendors/normalize";
 
 
 /* 04 - Elements
@@ -49,8 +50,7 @@
  * Cosemetic-free design patterns
  * namespace: .l-
 */
-@import "05-layouts/global-layout";
-@import "05-layouts/block-layout";
+@import "05-layouts/cooperation-grid";
 
 
 /* 06 - Components
@@ -60,12 +60,12 @@
  * molecules: simple groups of UI elements functioning together as a unit
  * organisms: complex UI components composed of groups of molecules and/or atoms and/or other organisms
 */
-@import "06-components/atoms/Button";
-@import "06-components/atoms/Input";
-@import "06-components/molecules/InputButtonBox";
-@import "06-components/organisms/Modal";
+@import "06-components/atoms/button";
+@import "06-components/atoms/input";
+@import "06-components/molecules/search-form";
+@import "06-components/organisms/header";
 
-/* 07 - Patterns
+/* 07 - Scopes
  * Scoped contexts in CSS solve a very specific and particular problem
  * For example areas of user-generated content, where some long-form/prose HTML has come from a CMS
  * namespace: .s-
@@ -78,6 +78,3 @@
  * It will most likely come with !important as we are sure to use them.
 */
 @import "08-utilities/display";
-@import "08-utilities/flex";
-@import "08-utilities/sizing";
-@import "08-utilities/spacing";

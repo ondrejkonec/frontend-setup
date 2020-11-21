@@ -1,24 +1,23 @@
 /* ============================================================================
-   c-Button
+   Input
    ========================================================================= */
+
 
 /**
  * Short atom description.
  */
+ 
 
-.s-cms-content {
-  font: 16px/1.5 serif; 
+/* Component structure
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font: bold 100%/1.5 sans-serif; 
-  }
+  .a-input
 
-  a {
-    text-decoration: underline; 
-  }
+ */
+
+
+// Block
+//--------------------------------------------------------------------------
+.a-input {
+  border: 1px solid #f4f4f4;
+  height: 40px;
 }

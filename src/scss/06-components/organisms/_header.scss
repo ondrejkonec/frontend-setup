@@ -10,17 +10,26 @@
 
 /* Component structure
 
-  .c-Modal
-  .c-Modal__inputBox
+  .o-header
+  .o-header__logo
+  .o-header__menu
+  .o-header__search-form
 
  */
 
 
 // Block
 //--------------------------------------------------------------------------
-.c-Modal {
+.o-modal {
   display: flex;
-  &__inputBox { // overriding molecule InputButtonBox styles or adding new ones
+  justify-content: space-between;
+  &__logo {
+    max-width: 12em;
+  }
+  &__menu {
+    font-size: 1rem;
+  }
+  &__input-box { // overriding molecule InputButtonBox styles or adding new ones
     margin-top: 10px;
   }
 }

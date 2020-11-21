@@ -1,25 +1,23 @@
 /* ============================================================================
-   InputButtonBox
+   Label
    ========================================================================= */
 
 
 /**
- * Short molecules description.
+ * Short atom description.
  */
  
 
 /* Component structure
 
-  .Input
+  .a-label
 
  */
 
 
 // Block
 //--------------------------------------------------------------------------
-.c-InputButtonBox {
-  display: flex;
-  & .c-Button {
-    margin-left: 8px;
-  }
+.a-label {
+  border: 1px solid #f4f4f4;
+  height: 40px;
 }

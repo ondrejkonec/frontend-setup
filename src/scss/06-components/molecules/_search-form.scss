@@ -1,23 +1,28 @@
 /* ============================================================================
-   Input
+   Search Form
    ========================================================================= */
 
 
 /**
- * Short atom description.
+ * Short molecules description.
  */
  
 
 /* Component structure
 
-  .Input
+  .m-search-form
 
  */
 
 
 // Block
 //--------------------------------------------------------------------------
-.c-Input {
-  border: 1px solid #f4f4f4;
-  height: 40px;
+.m-search-form {
+  display: flex;
+  & .a-button {
+    margin-left: 8px;
+  }
+  & .a-label {
+    margin-bottom: 4px;
+  }
 }

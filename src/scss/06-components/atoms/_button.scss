@@ -1,5 +1,5 @@
 /* ============================================================================
-   c-Button
+   Button
    ========================================================================= */
 
 
@@ -10,17 +10,17 @@
 
 /* Component structure
 
-  .c-Button
+  .a-button
 
-  .c-Button__icon
-  .c-Button__body
-  .c-Button__append
+  .a-button__icon
+  .a-button__label
+  .a-button__append
 
-  .c-Button--small
-  .c-Button--medium
-  .c-Button--large
+  .a-button--small
+  .a-button--medium
+  .a-button--large
 
-  .c-Button.is-active
+  .a-button.is-active
 
  */
 
@@ -30,7 +30,7 @@ $button-padding: 0.25em;
 
 // Block
 //--------------------------------------------------------------------------
-.c-Button {
+.a-button {
   // declarations
   padding: $button-padding;
   background: #ffcc00;
@@ -62,10 +62,10 @@ $button-padding: 0.25em;
 
 // Elements
 //--------------------------------------------------------------------------
-.c-Button {
+.a-button {
   &__icon {
   }
-  &__body {
+  &__label {
   }
   &__append {
   }
@@ -73,7 +73,7 @@ $button-padding: 0.25em;
 
 // Modifiers
 //--------------------------------------------------------------------------
-.c-Button {
+.a-button {
   $block: &;
 
   &--small {
@@ -82,7 +82,9 @@ $button-padding: 0.25em;
     }
   }
   &--medium {
+
   }
   &--large {
+
   }
 }
