@@ -1,12 +1,4 @@
-/* ============================================================================
-   Button
-   ========================================================================= */
-
-
-/**
- * Short atom description.
- */
- 
+// Button
 
 /* Component structure
 
@@ -21,31 +13,31 @@
   .a-button--large
 
   .a-button.is-active
+*/
 
- */
+@use '../../02-tools/breakpoint';
 
 // Component local variables
 //--------------------------------------------------------------------------
 $button-padding: 0.25em;
 
+
 // Block
 //--------------------------------------------------------------------------
 .a-button {
-  // declarations
   padding: $button-padding;
   background: #ffcc00;
 
   // Mobile-first responsive component changes
-  @include media-breakpoint-up(sm) {
+  @include breakpoint.up(sm) {
   }
-  @include media-breakpoint-up(md) {
+  @include breakpoint.up(md) {
   }
-  @include media-breakpoint-up(lg) {
+  @include breakpoint.up(lg) {
   }
-  @include media-breakpoint-up(xl) {
+  @include breakpoint.up(xl) {
   }
-  @include media-breakpoint-up(xxl) {
-  }
+
 
   // Pseudo elements (::before, ::after and all others)
   &::before {

@@ -1,0 +1,15 @@
+// Breakpoint mixin
+
+@use '../01-settings/breakpoints';
+
+@mixin up($breakpoint) {
+    @if (not map-has-key(breakpoints.$breakpoints-value, $breakpoint)) {
+        @content;
+    }
+
+    @else {
+        @media (min-width: map-get(breakpoints.$breakpoints-value, $breakpoint)) {
+            @content;
+        }
+    }
+}

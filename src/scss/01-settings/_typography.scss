@@ -1,0 +1,28 @@
+// Typography settings
+
+$font-size-root: 16px;
+$line-height-root: 1.5;
+
+$font-family: 'Poppins', sans-serif;
+
+$font-weight-values: (
+    light: 300,
+    regular: 400,
+    semibold: 700,
+    bold: 800,
+);
+
+
+// Typography modular scale
+// https://www.codementor.io/@ricardozea/100-responsive-typography-system-using-a-modular-scale-s5rhft58g
+
+$font-size-xxxs: 0.694rem;
+$font-size-xxs: 0.833rem;
+$font-size-xs: 1rem;
+$font-size-sm: 1.2rem;
+$font-size-md: 1.44rem;
+$font-size-lg: 1.728rem;
+$font-size-xl: 2.074rem;
+$font-size-xxl: 2.488rem;
+$font-size-xxxl: 2.986rem;
+

@@ -1,26 +1,16 @@
-/* ============================================================================
-   Modal
-   ========================================================================= */
-
-
-/**
- * Short organism description.
- */
- 
+// Header
 
 /* Component structure
-
   .o-header
   .o-header__logo
   .o-header__menu
-  .o-header__search-form
-
+  .o-header__search
  */
 
 
 // Block
 //--------------------------------------------------------------------------
-.o-modal {
+.o-header {
   display: flex;
   justify-content: space-between;
   &__logo {
@@ -29,7 +19,7 @@
   &__menu {
     font-size: 1rem;
   }
-  &__input-box { // overriding molecule InputButtonBox styles or adding new ones
+  &__search { // overriding molecule .m-search-form styles or adding new ones
     margin-top: 10px;
   }
 }
