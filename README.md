@@ -10,20 +10,17 @@ In root folder:
 - npm >= 6.9.0
 - Grunt >= 1.1.0
 
-# CSS Structure
-
-## Modules
-### Settings
+## CSS structure
+### Modules/Settings
 - Config switches
 - Globally-available variables
 - Color pallete, etc.
 
-### Tools
+#### Modules/Tools
 - Globally used functions, placeholders and mixins
 - Globally-available tools
 - Helper functions
 
-## Styles
 ### 01 - Vendors (Generic)
 - Third party vendors including normalize/reset
 - Ground-zero styles
