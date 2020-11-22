@@ -10,7 +10,7 @@ module.exports = function (grunt) {
     sass: {
       compilesass: {
         files: {
-          "src/css/main.css": "src/scss/main.scss",
+          "src/css/main.css": "src/scss/styles/main.scss",
         },
       },
     },
@@ -18,8 +18,8 @@ module.exports = function (grunt) {
     // CSS minification
     cssmin: {
       build: {
-        src: "src/scss/main.css",
-        dest: "dist/css/main.min.css",
+        src: "src/scss/styles/main.css",
+        dest: "public/css/main.min.css",
       },
     },
 
@@ -27,7 +27,7 @@ module.exports = function (grunt) {
     uglify: {
       build: {
         files: {
-          "dist/js/main.min.js": ["src/js/main.js"],
+          "public/js/main.min.js": ["src/js/main.js"],
         },
       },
     },
@@ -36,7 +36,7 @@ module.exports = function (grunt) {
     autoprefixer: {
       dist: {
         files: {
-          "dist/css/main.css": "src/css/main.css",
+          "public/css/main.css": "src/css/main.css",
         },
       },
     },
@@ -48,7 +48,7 @@ module.exports = function (grunt) {
         tasks: ["uglify"],
       },
       watchcss: {
-        files: ["src/scss/main.scss", "src/scss/**/*.scss"],
+        files: ["src/scss/styles/main.scss", "src/scss/**/**/*.scss"],
         tasks: ["sass", "autoprefixer", "cssmin"],
       },
     },

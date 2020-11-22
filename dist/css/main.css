@@ -434,33 +434,21 @@ template {
 @-ms-viewport {
   width: device-width;
 }
-html {
+body {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -ms-overflow-style: scrollbar;
 }
 
-h1 {
-  font-size: 2.074rem;
+html {
+  box-sizing: border-box;
 }
 
-h2 {
-  font-size: 1.728rem;
-}
-
-h3 {
-  font-size: 1.44rem;
-}
-
-h4 {
-  font-size: 1.2rem;
-}
-
-h5 {
-  font-size: 1rem;
-}
-
-h6 {
-  font-size: 0.833rem;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 p {

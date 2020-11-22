@@ -12,73 +12,72 @@
 */
 
 
-/* 01 - Settings
+/* Module - Settings
    * Design tokens for UI
    * Variables, config
 */
-@import '01-settings/box-sizing';
-@import '01-settings/colors';
-@import '01-settings/print';
-@import '01-settings/typography';
 
 
-/* 02 - Tools
+/* Module - Tools
  * Globally used functions, placeholders and mixins.
 */
-@import '02-tools/breakpoint';
-@import '02-tools/functions';
-@import '02-tools/mixins';
 
 
-/* 03 - Vendors (Generic)
+/* 01 - Vendors (Generic)
  * 3rd party vendors including Normalize, Reset, *
  * This is the first layer which generates actual CSS.
 */
-@import '03-vendors/reset';
-@import '03-vendors/normalize';
+@use '01-vendors/reset';
+@use '01-vendors/normalize';
 
 
-/* 04 - Elements
+/* 02 - Elements
  * Styling for bare HTML elements, e.g., H1, a, etc.
  * These come with default styling from the browser so we can redefine them here.
 */
-@import '04-elements/base';
-@import '04-elements/selection';
+@use '02-elements/base';
+@use '02-elements/headings';
+@use '02-elements/selection';
+@use '02-elements/text';
 
 
-/* 05 - Objects
+/* 03 - Layouts
  * Class-based selectors which define undecorated design patterns,
  * for example, grid layout, media object or container.
  * Cosemetic-free design patterns
  * namespace: .l-
 */
-@import '05-layouts/grid';
+@use '03-layouts/grid';
 
 
-/* 06 - Components
+/* 04 - Components
  * UI components
  * atoms: the smallest building blocks of a website, can't contain any other component
  * molecules: simple groups of UI elements functioning together as a unit
  * organisms: complex UI components composed of groups of molecules and/or atoms and/or other organisms
 */
-@import '06-components/atoms/button';
-@import '06-components/atoms/input';
 
-@import '06-components/molecules/search-form';
+// Atoms
+@use '04-components/atoms/button';
+@use '04-components/atoms/input';
 
-@import '06-components/organisms/header';
+// Molecules
+@use '04-components/molecules/search-form';
+
+// Organisms
+@use '04-components/organisms/header';
 
 /* 07 - Scopes
  * Scoped contexts in CSS solve a very specific and particular problem
  * For example areas of user-generated content, where some long-form/prose HTML has come from a CMS
  * namespace: .s-
 */
-@import '07-scopes/cms-content';
+@use '05-scopes/cms-content';
 
 
 /* 08 - Utilities
  * Ability to override anything.
  * It will most likely come with !important as we are sure to use them.
 */
-@import '08-utilities/display';
-@import '08-utilities/widths';
+@use '06-utilities/visibility';
+

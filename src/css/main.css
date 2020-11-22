@@ -1,43 +1,3 @@
-/* ============================================================================
-   MAIN STYLES
-   ========================================================================= */
-/**
- *
- * Main styles. 
- *
- * The structure is based on ITCSS and modified: * https: //www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
-*/
-/* 01 - Settings
-   * Design tokens for UI
-   * Variables, config
-*/
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-/* ============================================================================
-   Print
-   ========================================================================= */
-*,
-*::before,
-*::after {
-  color: black;
-  background: transparent;
-}
-
-/* 02 - Tools
- * Globally used functions, placeholders and mixins.
-*/
-/* 03 - Vendors (Generic)
- * 3rd party vendors including Normalize, Reset, *
- * This is the first layer which generates actual CSS.
-*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -427,16 +387,24 @@ template {
   display: none;
 }
 
-/* 04 - Elements
- * Styling for bare HTML elements, e.g., H1, a, etc.
- * These come with default styling from the browser so we can redefine them here.
-*/
 @-ms-viewport {
   width: device-width;
 }
-html {
+body {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -ms-overflow-style: scrollbar;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 h1 {
@@ -463,32 +431,20 @@ h6 {
   font-size: 0.833rem;
 }
 
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
 ::selection {
   color: white;
   background: black;
 }
 
-/* 05 - Objects
- * Class-based selectors which define undecorated design patterns,
- * for example, grid layout, media object or container.
- * Cosemetic-free design patterns
- * namespace: .l-
-*/
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 .l-grid {
   /* grid definitions as a layout layer */
 }
 
-/* 06 - Components
- * UI components
- * atoms: the smallest building blocks of a website, can't contain any other component
- * molecules: simple groups of UI elements functioning together as a unit
- * organisms: complex UI components composed of groups of molecules and/or atoms and/or other organisms
-*/
 /* Component structure
 
   .a-button
@@ -552,11 +508,6 @@ p {
   margin-top: 10px;
 }
 
-/* 07 - Scopes
- * Scoped contexts in CSS solve a very specific and particular problem
- * For example areas of user-generated content, where some long-form/prose HTML has come from a CMS
- * namespace: .s-
-*/
 .s-cms-content {
   font: 16px/1.5 serif;
 }
@@ -570,26 +521,6 @@ p {
 }
 .s-cms-content a {
   text-decoration: underline;
-}
-
-/* 08 - Utilities
- * Ability to override anything.
- * It will most likely come with !important as we are sure to use them.
-*/
-.u-display-none {
-  display: none !important;
-}
-
-.u-display-block {
-  display: block !important;
-}
-
-.u-display-inline {
-  display: inline !important;
-}
-
-.u-display-inline-block {
-  display: inline-block !important;
 }
 
 /**
@@ -612,20 +543,50 @@ p {
   clip: rect(1px, 1px, 1px, 1px) !important;
 }
 
-.u-1\/1 {
-  width: 100% !important;
-}
-
-.u-1\/2 {
-  width: 50% !important;
-}
-
-.u-1\/3 {
-  width: 33.333333333% !important;
-}
-
-.u-2\/3 {
-  width: 66.666666666% !important;
-}
+/* ============================================================================
+   MAIN STYLES
+   ========================================================================= */
+/**
+ *
+ * Main styles. 
+ *
+ * The structure is based on ITCSS and modified: * https: //www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+*/
+/* Module - Settings
+   * Design tokens for UI
+   * Variables, config
+*/
+/* Module - Tools
+ * Globally used functions, placeholders and mixins.
+*/
+/* 01 - Vendors (Generic)
+ * 3rd party vendors including Normalize, Reset, *
+ * This is the first layer which generates actual CSS.
+*/
+/* 02 - Elements
+ * Styling for bare HTML elements, e.g., H1, a, etc.
+ * These come with default styling from the browser so we can redefine them here.
+*/
+/* 03 - Layouts
+ * Class-based selectors which define undecorated design patterns,
+ * for example, grid layout, media object or container.
+ * Cosemetic-free design patterns
+ * namespace: .l-
+*/
+/* 04 - Components
+ * UI components
+ * atoms: the smallest building blocks of a website, can't contain any other component
+ * molecules: simple groups of UI elements functioning together as a unit
+ * organisms: complex UI components composed of groups of molecules and/or atoms and/or other organisms
+*/
+/* 07 - Scopes
+ * Scoped contexts in CSS solve a very specific and particular problem
+ * For example areas of user-generated content, where some long-form/prose HTML has come from a CMS
+ * namespace: .s-
+*/
+/* 08 - Utilities
+ * Ability to override anything.
+ * It will most likely come with !important as we are sure to use them.
+*/
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,27 @@
+// Headings
+
+@use '../../modules/settings/typography';
+
+h1 {
+  font-size: typography.$font-size-xl;
+}
+
+h2 {
+  font-size: typography.$font-size-lg;
+}
+
+h3 {
+  font-size: typography.$font-size-md;
+}
+
+h4 {
+  font-size: typography.$font-size-sm;
+}
+
+h5 {
+  font-size: typography.$font-size-xs;
+}
+
+h6 {
+  font-size: typography.$font-size-xxs;
+}
