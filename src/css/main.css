@@ -473,7 +473,7 @@ img {
 }
 
 /* Component structure
-
+==============================
   .a-button
 
   .a-button__icon
@@ -494,28 +494,28 @@ img {
   padding-right: 0.25em;
 }
 /* Component structure
-
+==============================
   .a-input
- */
+*/
 .a-input {
   border: 1px solid #f4f4f4;
   height: 40px;
 }
 
 /* Component structure
+==============================
   .m-search-form
  */
 .m-search-form {
   display: flex;
 }
-.m-search-form .a-button {
-  margin-left: 8px;
-}
-.m-search-form .a-label {
-  margin-bottom: 4px;
+
+.m-search-form__button {
+  margin-left: 10px;
 }
 
 /* Component structure
+==============================
   .o-header
   .o-header__logo
   .o-header__menu
