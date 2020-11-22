@@ -12,7 +12,7 @@ In root folder:
 
 # CSS Structure
 
-### Modules
+## Modules
 ### Settings
 - Config switches
 - Globally-available variables
@@ -23,6 +23,7 @@ In root folder:
 - Globally-available tools
 - Helper functions
 
+## Styles
 ### 01 - Vendors (Generic)
 - Third party vendors including normalize/reset
 - Ground-zero styles
