@@ -76,8 +76,16 @@ img {
 }
 
 /* Forms 
-  form, label, input, button, select, datalist, optgroup, option, textarea, fieldset, legend, output, progress, meter
+  form, label, button, select, datalist, optgroup, option, textarea, fieldset, legend, output, progress, meter
 */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 
 /* Media 
   iframe, embed, object, param, video, audio, track
