@@ -1,8 +1,0 @@
-// Base
-
-@use '../../modules/settings/typography';
-
-p {
-  font-size: typography.$font-size-xs;
-  line-height: typography.$line-height-root;
-}

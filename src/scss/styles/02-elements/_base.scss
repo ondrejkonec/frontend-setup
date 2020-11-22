@@ -1,4 +1,6 @@
-// Base element settings
+// Base
+
+@use '../../modules/settings/typography';
 
 @at-root {
   @-ms-viewport {
@@ -22,3 +24,71 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+/* Selection */
+
+::selection {
+  color: hsl(0, 0%, 100%);
+  background: hsl(0, 0%, 0%);
+}
+
+/* Section
+  hgroup, article, section, aside, nav, address, header, footer
+*/
+h1 {
+  font-size: typography.$font-size-xl;
+}
+
+h2 {
+  font-size: typography.$font-size-lg;
+}
+
+h3 {
+  font-size: typography.$font-size-md;
+}
+
+h4 {
+  font-size: typography.$font-size-sm;
+}
+
+h5 {
+  font-size: typography.$font-size-xs;
+}
+
+h6 {
+  font-size: typography.$font-size-xxs;
+}
+
+/* Grouping content
+  hr, pre, blockquote, ol, ul, menu, li, dl, dt, dd, figure, figcaption, main, div
+*/
+p {
+  font-size: typography.$font-size-xs;
+  line-height: typography.$line-height-root;
+}
+
+/* Embedded
+  picture, source, iframe, embed, object, param, video, audio, track, map, area
+*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Forms 
+  form, label, input, button, select, datalist, optgroup, option, textarea, fieldset, legend, output, progress, meter
+*/
+
+/* Media 
+  iframe, embed, object, param, video, audio, track
+*/
+
+/* Tables 
+  table, caption, colgroup, col, tbody, thead, tfoot, tr, td, th
+*/
+
+/* Text-level
+  a, em, strong, small, s, cite, q, dfn, abbr, ruby, rt, rp, data, code, time, var, sub, sup, i, b, u, mark, span, br
+*/
+
+

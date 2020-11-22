@@ -407,6 +407,15 @@ html {
   box-sizing: inherit;
 }
 
+/* Selection */
+::selection {
+  color: white;
+  background: black;
+}
+
+/* Section
+  hgroup, article, section, aside, nav, address, header, footer
+*/
 h1 {
   font-size: 2.074rem;
 }
@@ -431,16 +440,34 @@ h6 {
   font-size: 0.833rem;
 }
 
-::selection {
-  color: white;
-  background: black;
-}
-
+/* Grouping content
+  hr, pre, blockquote, ol, ul, menu, li, dl, dt, dd, figure, figcaption, main, div
+*/
 p {
   font-size: 1rem;
   line-height: 1.5;
 }
 
+/* Embedded
+  picture, source, iframe, embed, object, param, video, audio, track, map, area
+*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Forms 
+  form, label, input, button, select, datalist, optgroup, option, textarea, fieldset, legend, output, progress, meter
+*/
+/* Media 
+  iframe, embed, object, param, video, audio, track
+*/
+/* Tables 
+  table, caption, colgroup, col, tbody, thead, tfoot, tr, td, th
+*/
+/* Text-level
+  a, em, strong, small, s, cite, q, dfn, abbr, ruby, rt, rp, data, code, time, var, sub, sup, i, b, u, mark, span, br
+*/
 .l-grid {
   /* grid definitions as a layout layer */
 }
