@@ -47,7 +47,7 @@ Class-based selectors which define undecorated design patterns.
 - Still only using classes
 - More explicitly named
 
-### 05 - Scopes
+### 05 - Scopes (s-)
 - Scoped contexts in CSS solve a very specific and particular problem
 - For example areas of user-generated content, where some long-form/prose HTML has come from a CMS
 
