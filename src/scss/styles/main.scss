@@ -35,6 +35,7 @@
  * Styling for bare HTML elements, e.g., H1, a, etc.
  * These come with default styling from the browser so we can redefine them here.
 */
+@use '02-elements/reset';
 @use '02-elements/base';
 
 
@@ -49,19 +50,19 @@
 
 /* 04 - Components
  * UI components
- * atoms: the smallest building blocks of a website, can't contain any other component
- * molecules: simple groups of UI elements functioning together as a unit
- * organisms: complex UI components composed of groups of molecules and/or atoms and/or other organisms
+ * atoms (a-): the smallest building blocks of a website, can't contain any other component
+ * molecules (m-): simple groups of UI elements functioning together as a unit
+ * organisms (o-): complex UI components composed of groups of molecules and/or atoms and/or other organisms
 */
 
-// Atoms
+// Atoms (a-)
 @use '04-components/atoms/button';
 @use '04-components/atoms/input';
 
-// Molecules
+// Molecules (m-)
 @use '04-components/molecules/search-form';
 
-// Organisms
+// Organisms (o-)
 @use '04-components/organisms/header';
 
 /* 07 - Scopes
