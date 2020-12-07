@@ -1,4 +1,7 @@
-// Mixins
+// List of mixins
+
+
+/* || Right to left mixin */
 
 @mixin rtl($property, $ltr-value, $rtl-value) {
   #{$property}: $ltr-value;

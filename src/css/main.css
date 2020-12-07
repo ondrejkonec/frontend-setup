@@ -387,6 +387,8 @@ template {
   display: none;
 }
 
+/* || Typography scale */
+/* || General styles */
 @-ms-viewport {
   width: device-width;
 }
@@ -407,13 +409,12 @@ html {
   box-sizing: inherit;
 }
 
-/* Selection */
 ::selection {
   color: white;
   background: black;
 }
 
-/* Section
+/* || Sections
   hgroup, article, section, aside, nav, address, header, footer
 */
 h1 {
@@ -440,7 +441,7 @@ h6 {
   font-size: 0.833rem;
 }
 
-/* Grouping content
+/* || Grouping content
   hr, pre, blockquote, ol, ul, menu, li, dl, dt, dd, figure, figcaption, main, div
 */
 p {
@@ -448,7 +449,7 @@ p {
   line-height: 1.5;
 }
 
-/* Embedded
+/* || Embedded
   picture, source, iframe, embed, object, param, video, audio, track, map, area
 */
 img {
@@ -456,7 +457,7 @@ img {
   height: auto;
 }
 
-/* Forms 
+/* || Forms 
   form, label, button, select, datalist, optgroup, option, textarea, fieldset, legend, output, progress, meter
 */
 input[type=number] {
@@ -468,19 +469,20 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-/* Media 
+/* || Media 
   iframe, embed, object, param, video, audio, track
 */
-/* Tables 
+/* || Tables 
   table, caption, colgroup, col, tbody, thead, tfoot, tr, td, th
 */
-/* Text-level
+/* || Text-level
   a, em, strong, small, s, cite, q, dfn, abbr, ruby, rt, rp, data, code, time, var, sub, sup, i, b, u, mark, span, br
 */
 .l-grid {
   /* grid definitions as a layout layer */
 }
 
+/* || Breakpoint generator */
 /* Component structure
 ==============================
   .a-button

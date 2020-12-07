@@ -1,7 +1,10 @@
-// Generating breakpoints
+// Mixin that generate breakpoints
+
 
 @use '../../modules/settings/breakpoints';
 
+
+/* || Breakpoint generator */
 @mixin up($breakpoint) {
     @if (not map-has-key(breakpoints.$breakpoints-value, $breakpoint)) {
         @content;
