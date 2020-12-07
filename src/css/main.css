@@ -457,8 +457,17 @@ img {
 }
 
 /* Forms 
-  form, label, input, button, select, datalist, optgroup, option, textarea, fieldset, legend, output, progress, meter
+  form, label, button, select, datalist, optgroup, option, textarea, fieldset, legend, output, progress, meter
 */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 /* Media 
   iframe, embed, object, param, video, audio, track
 */
@@ -602,9 +611,9 @@ img {
 */
 /* 04 - Components
  * UI components
- * atoms: the smallest building blocks of a website, can't contain any other component
- * molecules: simple groups of UI elements functioning together as a unit
- * organisms: complex UI components composed of groups of molecules and/or atoms and/or other organisms
+ * atoms (a-): the smallest building blocks of a website, can't contain any other component
+ * molecules (m-): simple groups of UI elements functioning together as a unit
+ * organisms (o-): complex UI components composed of groups of molecules and/or atoms and/or other organisms
 */
 /* 07 - Scopes
  * Scoped contexts in CSS solve a very specific and particular problem
