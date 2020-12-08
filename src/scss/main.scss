@@ -38,14 +38,13 @@
  * This is the first layer which generates actual CSS.
 */
 @use '03-vendors/reset';
-@use '03-vendors/normalize';
 
 
 /* 02 - Elements
  * Styling for bare HTML elements, e.g., H1, a, etc.
  * These come with default styling from the browser so we can redefine them here.
 */
-@use '02-elements/base';
+@use '04-elements/base';
 
 
 /* 03 - Layouts
@@ -54,7 +53,8 @@
  * Cosemetic-free design patterns
  * namespace: .l-
 */
-@use '03-layouts/grid';
+@use '05-layouts/clearfix';
+@use '05-layouts/grid';
 
 
 /* 04 - Components
@@ -65,26 +65,26 @@
 */
 
 // Atoms (a-)
-@use '04-components/atoms/button';
-@use '04-components/atoms/input';
+@use '06-components/atoms/button';
+@use '06-components/atoms/input';
 
 // Molecules (m-)
-@use '04-components/molecules/search-form';
+@use '06-components/molecules/search-form';
 
 // Organisms (o-)
-@use '04-components/organisms/header';
+@use '06-components/organisms/header';
 
 /* 07 - Scopes
  * Scoped contexts in CSS solve a very specific and particular problem
  * For example areas of user-generated content, where some long-form/prose HTML has come from a CMS
  * namespace: .s-
 */
-@use '05-scopes/cms-content';
+@use '07-scopes/cms-content';
 
 
 /* 08 - Utilities
  * Ability to override anything.
  * It will most likely come with !important as we are sure to use them.
 */
-@use '06-utilities/visibility';
+@use '08-utilities/visibility';
 

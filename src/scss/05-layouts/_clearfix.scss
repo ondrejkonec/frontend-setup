@@ -1,0 +1,12 @@
+/* The very latest clearfix needed: http://cssmojo.com/the-very-latest-clearfix-reloaded/ */
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* for supporting browsers, this is the standard way to clear floats in an element */
+/* Some good discussion here: https://rachelandrew.co.uk/archives/2017/01/24/the-end-of-the-clearfix-hack/ (see comments) */
+.clearfix {
+  display: flow-root;
+}
