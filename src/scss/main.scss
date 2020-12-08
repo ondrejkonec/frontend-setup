@@ -13,23 +13,32 @@
 */
 
 
-/* Module - Settings
+/* 01 - Settings
    * Design tokens for UI
-   * Variables, config
+   * Variables, Config
 */
+@use '01-settings/breakpoints';
+@use '01-settings/colors';
+@use '01-settings/typography';
+
+// Design tokens
+@use '01-settings/design-tokens';
 
 
-/* Module - Tools
- * Globally used functions, placeholders and mixins.
+/* 02 - Tools
+ * Globally used functions and mixins.
 */
+@use '02-tools/breakpoint';
+@use '02-tools/functions';
+@use '02-tools/mixins';
 
 
-/* 01 - Vendors (Generic)
+/* 03 - Vendors (Generic)
  * 3rd party vendors including Normalize, Reset, *
  * This is the first layer which generates actual CSS.
 */
-@use '01-vendors/reset';
-@use '01-vendors/normalize';
+@use '03-vendors/reset';
+@use '03-vendors/normalize';
 
 
 /* 02 - Elements
