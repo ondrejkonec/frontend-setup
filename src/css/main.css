@@ -11,52 +11,193 @@
    * Design tokens for UI
    * Variables, Config
 */
-@use '01-settings/breakpoints';
-@use '01-settings/colors';
-@use '01-settings/typography';
-@use '01-settings/design-tokens';
+/* || Base colors */
+/* || Brand colors */
+/* || Typography scale */
 /* 02 - Tools
  * Globally used functions and mixins.
 */
-@use '02-tools/breakpoint';
-@use '02-tools/functions';
-@use '02-tools/mixins';
+/* || Breakpoints mixin */
 /* 03 - Vendors (Generic)
  * 3rd party vendors including Normalize, Reset, *
  * This is the first layer which generates actual CSS.
 */
-@use '03-vendors/reset';
-@use '03-vendors/normalize';
-/* 02 - Elements
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 04 - Elements
  * Styling for bare HTML elements, e.g., H1, a, etc.
  * These come with default styling from the browser so we can redefine them here.
 */
-@use '02-elements/base';
-/* 03 - Layouts
+/* || General styles */
+@-ms-viewport {
+  width: device-width;
+}
+body {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: scrollbar;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+::-moz-selection {
+  color: white;
+  background: black;
+}
+
+::selection {
+  color: white;
+  background: black;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* 05 - Objects
  * Class-based selectors which define undecorated design patterns,
  * for example, grid layout, media object or container.
  * Cosemetic-free design patterns
- * namespace: .l-
+ * namespace: .o-
 */
-@use '03-layouts/grid';
-/* 04 - Components
+/* The very latest clearfix needed: http://cssmojo.com/the-very-latest-clearfix-reloaded/ */
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* for supporting browsers, this is the standard way to clear floats in an element */
+/* Some good discussion here: https://rachelandrew.co.uk/archives/2017/01/24/the-end-of-the-clearfix-hack/ (see comments) */
+.clearfix {
+  display: flow-root;
+}
+
+/* 06 - Components
  * UI components
  * atoms (a-): the smallest building blocks of a website, can't contain any other component
  * molecules (m-): simple groups of UI elements functioning together as a unit
  * organisms (o-): complex UI components composed of groups of molecules and/or atoms and/or other organisms
 */
-@use '04-components/atoms/button';
-@use '04-components/atoms/input';
-@use '04-components/molecules/search-form';
-@use '04-components/organisms/header';
+/* Component structure
+==============================
+  Atom
+*/
+/* Component structure
+==============================
+  Molecule
+ */
+/* Component structure
+==============================
+  Organism
+ */
 /* 07 - Scopes
  * Scoped contexts in CSS solve a very specific and particular problem
  * For example areas of user-generated content, where some long-form/prose HTML has come from a CMS
  * namespace: .s-
 */
-@use '05-scopes/cms-content';
+.s-cms-content {
+  font: 16px/1.5 serif;
+}
+.s-cms-content h1,
+.s-cms-content h2,
+.s-cms-content h3,
+.s-cms-content h4,
+.s-cms-content h5,
+.s-cms-content h6 {
+  font: bold 100%/1.5 sans-serif;
+}
+.s-cms-content a {
+  text-decoration: underline;
+}
+
 /* 08 - Utilities
  * Ability to override anything.
  * It will most likely come with !important as we are sure to use them.
 */
-@use '06-utilities/visibility';
+/**
+ * Completely hide content from view and from screenreaders.
+ */
+.u-hide {
+  display: none !important;
+}
+
+/**
+ * Hide content from view, but leave it accessible to screenreaders.
+ *
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.u-hide-visually {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+}

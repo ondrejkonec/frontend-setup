@@ -17,47 +17,40 @@
    * Design tokens for UI
    * Variables, Config
 */
-@use '01-settings/breakpoints';
-@use '01-settings/colors';
-@use '01-settings/typography';
-
-// Design tokens
-@use '01-settings/design-tokens';
+@import '01-settings/breakpoints';
+@import '01-settings/colors';
+@import '01-settings/typography';
 
 
 /* 02 - Tools
  * Globally used functions and mixins.
 */
-@use '02-tools/breakpoint';
-@use '02-tools/functions';
-@use '02-tools/mixins';
-
+@import '02-tools/breakpoints';
 
 /* 03 - Vendors (Generic)
  * 3rd party vendors including Normalize, Reset, *
  * This is the first layer which generates actual CSS.
 */
-@use '03-vendors/reset';
+@import '03-vendors/reset';
 
 
-/* 02 - Elements
+/* 04 - Elements
  * Styling for bare HTML elements, e.g., H1, a, etc.
  * These come with default styling from the browser so we can redefine them here.
 */
-@use '04-elements/base';
+@import '04-elements/base';
 
 
-/* 03 - Layouts
+/* 05 - Objects
  * Class-based selectors which define undecorated design patterns,
  * for example, grid layout, media object or container.
  * Cosemetic-free design patterns
- * namespace: .l-
+ * namespace: .o-
 */
-@use '05-layouts/clearfix';
-@use '05-layouts/grid';
+@import '05-objects/clearfix';
 
 
-/* 04 - Components
+/* 06 - Components
  * UI components
  * atoms (a-): the smallest building blocks of a website, can't contain any other component
  * molecules (m-): simple groups of UI elements functioning together as a unit
@@ -65,26 +58,25 @@
 */
 
 // Atoms (a-)
-@use '06-components/atoms/button';
-@use '06-components/atoms/input';
+@import '06-components/atoms/atom';
 
 // Molecules (m-)
-@use '06-components/molecules/search-form';
+@import '06-components/molecules/molecule';
 
 // Organisms (o-)
-@use '06-components/organisms/header';
+@import '06-components/organisms/organism';
 
 /* 07 - Scopes
  * Scoped contexts in CSS solve a very specific and particular problem
  * For example areas of user-generated content, where some long-form/prose HTML has come from a CMS
  * namespace: .s-
 */
-@use '07-scopes/cms-content';
+@import '07-scopes/cms';
 
 
 /* 08 - Utilities
  * Ability to override anything.
  * It will most likely come with !important as we are sure to use them.
 */
-@use '08-utilities/visibility';
+@import '08-utilities/utilities';
 
