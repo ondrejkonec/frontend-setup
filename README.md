@@ -11,37 +11,33 @@ In root folder:
 - Grunt >= 1.1.0
 
 ## CSS structure
-### Modules
-
-#### Settings
+### 01 - Settings
 - Config switches
 - Globally-available variables
 - Color pallete, etc.
 
-#### Tools
+### 02 - Tools
 - Globally used functions, placeholders and mixins
 - Globally-available tools
 - Helper functions
-
-### Styles
-#### 01 - Vendors (Generic)
+### 03 - Vendors (Generic)
 - Third party vendors including normalize/reset
 - Ground-zero styles
 - This is the first layer which generates actual CSS
 
-#### 02 - Elements
+### 04 - Elements
 These come with default styling from the browser so we can redefine them here.
 - Unclassed HTML elements
 - Last layer we see type selector
 
-#### 03 - Layouts (l-)
+### 05 - Objects (o-)
 Class-based selectors which define undecorated design patterns.
 - OOCSS
 - Design patterns
 - No cosmetic
 - Begin using classes exclusively
 
-#### 04 - Components (a-, m-, o-)
+### 06 - Components (a-, m-, o-)
 - The components are divided into three groups:
   - **atoms**: the smallest building blocks of a website, can't contain any other component
   - **molecules**: simple groups of UI elements functioning together as a unit
@@ -50,11 +46,11 @@ Class-based selectors which define undecorated design patterns.
 - Still only using classes
 - More explicitly named
 
-#### 05 - Scopes (s-)
+### 07 - Scopes (s-)
 - Scoped contexts in CSS solve a very specific and particular problem
 - For example areas of user-generated content, where some long-form/prose HTML has come from a CMS
 
-#### 06 - Utilities (u-)
+### 08 - Utilities (u-)
 Ability to override anything. It will most likely come with !important as we are sure to use them.
 - Overrides, helpers, utilities
 - Only affect one piece of the DOM at a time
