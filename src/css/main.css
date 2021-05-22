@@ -11,14 +11,48 @@
    * Design tokens for UI
    * Variables, Config
 */
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+/* 02 - Design Tokens
+ * Visual vocabulary of the site
+*/
+/*------------------------------------*\
+  #COLOR PALLETE AND COLORS
+\*------------------------------------*/
 /* || Base colors */
 /* || Brand colors */
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #SPACING
+\*------------------------------------*/
+/*------------------------------------*\
+  #TYPOGRAPHY SETTINGS
+\*------------------------------------*/
 /* || Typography scale */
-/* 02 - Tools
+/* 03 - Tools
  * Globally used functions and mixins.
 */
-/* || Breakpoints mixin */
-/* 03 - Vendors (Generic)
+/* Breakpoints generator
+==============================
+*/
+/* Clearfix, if need
+==============================
+*/
+/* The very latest clearfix needed: http://cssmojo.com/the-very-latest-clearfix-reloaded/ */
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both; }
+
+/* for supporting browsers, this is the standard way to clear floats in an element */
+/* Some good discussion here: https://rachelandrew.co.uk/archives/2017/01/24/the-end-of-the-clearfix-hack/ (see comments) */
+.clearfix {
+  display: flow-root; }
+
+/* 04 - Vendors (Generic)
  * 3rd party vendors including Normalize, Reset, *
  * This is the first layer which generates actual CSS.
 */
@@ -40,107 +74,87 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+  display: block; }
 
 body {
-  line-height: 1;
-}
+  line-height: 1; }
 
 ol, ul {
-  list-style: none;
-}
+  list-style: none; }
 
 blockquote, q {
-  quotes: none;
-}
+  quotes: none; }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
-  content: none;
-}
+  content: '';
+  content: none; }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
-/* 04 - Elements
+/* 05 - Elements
  * Styling for bare HTML elements, e.g., H1, a, etc.
  * These come with default styling from the browser so we can redefine them here.
 */
+/* RAW HTML Elements
+==============================
+*/
 /* || General styles */
 @-ms-viewport {
-  width: device-width;
-}
+  width: device-width; }
 body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -ms-overflow-style: scrollbar;
-}
+  -ms-overflow-style: scrollbar; }
 
 html {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 ::-moz-selection {
   color: white;
-  background: black;
-}
+  background: black; }
 
 ::selection {
   color: white;
-  background: black;
-}
+  background: black; }
 
 img {
   max-width: 100%;
-  height: auto;
-}
+  height: auto; }
 
-input[type=number] {
-  -moz-appearance: textfield;
-}
+input[type='number'] {
+  -moz-appearance: textfield; }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
+  -webkit-appearance: none; }
 
-/* 05 - Objects
+/* 06 - Skeleton
  * Class-based selectors which define undecorated design patterns,
  * for example, grid layout, media object or container.
  * Cosemetic-free design patterns
- * namespace: .o-
+ * namespace: .s-
 */
-/* The very latest clearfix needed: http://cssmojo.com/the-very-latest-clearfix-reloaded/ */
-.clearfix:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-/* for supporting browsers, this is the standard way to clear floats in an element */
-/* Some good discussion here: https://rachelandrew.co.uk/archives/2017/01/24/the-end-of-the-clearfix-hack/ (see comments) */
-.clearfix {
-  display: flow-root;
-}
-
-/* 06 - Components
+/* Grid settings and behaviour
+==============================
+*/
+/* Web layouts
+==============================
+*/
+/* 07 - Components
  * UI components
  * atoms (a-): the smallest building blocks of a website, can't contain any other component
  * molecules (m-): simple groups of UI elements functioning together as a unit
@@ -158,36 +172,18 @@ input::-webkit-inner-spin-button {
 ==============================
   Organism
  */
-/* 07 - Scopes
- * Scoped contexts in CSS solve a very specific and particular problem
- * For example areas of user-generated content, where some long-form/prose HTML has come from a CMS
- * namespace: .s-
-*/
-.s-cms-content {
-  font: 16px/1.5 serif;
-}
-.s-cms-content h1,
-.s-cms-content h2,
-.s-cms-content h3,
-.s-cms-content h4,
-.s-cms-content h5,
-.s-cms-content h6 {
-  font: bold 100%/1.5 sans-serif;
-}
-.s-cms-content a {
-  text-decoration: underline;
-}
-
 /* 08 - Utilities
  * Ability to override anything.
  * It will most likely come with !important as we are sure to use them.
+*/
+/* Global utilities
+==============================
 */
 /**
  * Completely hide content from view and from screenreaders.
  */
 .u-hide {
-  display: none !important;
-}
+  display: none !important; }
 
 /**
  * Hide content from view, but leave it accessible to screenreaders.
@@ -199,5 +195,4 @@ input::-webkit-inner-spin-button {
   width: 1px !important;
   height: 1px !important;
   overflow: hidden !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-}
+  clip: rect(1px, 1px, 1px, 1px) !important; }

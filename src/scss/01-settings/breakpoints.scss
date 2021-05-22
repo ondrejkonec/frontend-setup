@@ -1,8 +1,12 @@
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+
 // Breakpoints settings defined in 'em' unit
 
-$breakpoints-value: (
-    sm: 36em,
-    md: 48em,
-    lg: 62.25em,
-    xl: 75em
+$breakpoints: (
+    small: 0, // from 0px - 640px
+    medium: 40.0625em, // from 641px to 1279px
+    large: 80em, // from 1280px to 1700px
+    huge: 106.3125em, // 1700px and more
 );

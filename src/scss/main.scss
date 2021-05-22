@@ -4,7 +4,6 @@
    MAIN STYLES
    ========================================================================= */
 
-   
 /**
  *
  * Main styles. 
@@ -18,39 +17,46 @@
    * Variables, Config
 */
 @import '01-settings/breakpoints';
-@import '01-settings/colors';
-@import '01-settings/typography';
 
+/* 02 - Design Tokens
+ * Visual vocabulary of the site
+*/
+@import '02-design-tokens/colors';
+@import '02-design-tokens/fonts';
+@import '02-design-tokens/spacing';
+@import '02-design-tokens/typography';
 
-/* 02 - Tools
+/* 03 - Tools
  * Globally used functions and mixins.
 */
-@import '02-tools/breakpoints';
+@import '03-tools/media-queries';
+@import '03-tools/clearfix';
 
-/* 03 - Vendors (Generic)
+/* 04 - Vendors (Generic)
  * 3rd party vendors including Normalize, Reset, *
  * This is the first layer which generates actual CSS.
 */
-@import '03-vendors/reset';
+@import '04-generic/reset';
 
 
-/* 04 - Elements
+/* 05 - Elements
  * Styling for bare HTML elements, e.g., H1, a, etc.
  * These come with default styling from the browser so we can redefine them here.
 */
-@import '04-elements/base';
+@import '05-elements/base';
 
 
-/* 05 - Objects
+/* 06 - Skeleton
  * Class-based selectors which define undecorated design patterns,
  * for example, grid layout, media object or container.
  * Cosemetic-free design patterns
- * namespace: .o-
+ * namespace: .s-
 */
-@import '05-objects/clearfix';
+@import '06-skeleton/grid';
+@import '06-skeleton/layouts';
 
 
-/* 06 - Components
+/* 07 - Components
  * UI components
  * atoms (a-): the smallest building blocks of a website, can't contain any other component
  * molecules (m-): simple groups of UI elements functioning together as a unit
@@ -58,25 +64,18 @@
 */
 
 // Atoms (a-)
-@import '06-components/atoms/atom';
+@import '07-components/atoms/atom';
 
 // Molecules (m-)
-@import '06-components/molecules/molecule';
+@import '07-components/molecules/molecule';
 
 // Organisms (o-)
-@import '06-components/organisms/organism';
-
-/* 07 - Scopes
- * Scoped contexts in CSS solve a very specific and particular problem
- * For example areas of user-generated content, where some long-form/prose HTML has come from a CMS
- * namespace: .s-
-*/
-@import '07-scopes/cms';
+@import '07-components/organisms/organism';
 
 
 /* 08 - Utilities
  * Ability to override anything.
  * It will most likely come with !important as we are sure to use them.
 */
-@import '08-utilities/utilities';
+@import '08-utilities/global';
 
