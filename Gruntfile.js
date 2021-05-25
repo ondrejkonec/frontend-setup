@@ -61,6 +61,18 @@ module.exports = function (grunt) {
               expand: true,
               src: ['main.min.css'],
               dest: 'public/css'
+          },
+          {
+            cwd: 'src/svg',
+            expand: true,
+            src: ['*.svg'],
+            dest: 'public/svg'
+          },
+          {
+              cwd: 'src/img',
+              expand: true,
+              src: ['*'],
+              dest: 'public/img'
           }]
       }
   },

@@ -16,13 +16,15 @@
    * Design tokens for UI
    * Variables, Config
 */
+@import '01-settings/reset';
 @import '01-settings/breakpoints';
+@import '01-settings/fonts';
+@import '01-settings/global';
 
 /* 02 - Design Tokens
  * Visual vocabulary of the site
 */
 @import '02-design-tokens/colors';
-@import '02-design-tokens/fonts';
 @import '02-design-tokens/spacing';
 @import '02-design-tokens/typography';
 
@@ -36,7 +38,6 @@
  * 3rd party vendors including Normalize, Reset, *
  * This is the first layer which generates actual CSS.
 */
-@import '04-generic/reset';
 
 
 /* 05 - Elements

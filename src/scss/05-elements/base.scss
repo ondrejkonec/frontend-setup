@@ -3,32 +3,33 @@
 */
 
 /* || General styles */
-@at-root {
-  @-ms-viewport {
-    width: device-width;
-  }
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
+  font-family: 'Work Sans', sans-serif;
+
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -ms-overflow-style: scrollbar;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
-html {
-  box-sizing: border-box;
-}
-
+/* Box model set to border-box with inheriting */
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
 
-::selection {
-  color: hsl(0, 0%, 100%);
-  background: hsl(0, 0%, 0%);
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
 img {
@@ -36,11 +37,42 @@ img {
   height: auto;
 }
 
+/* using fluid images https://www.zachleat.com/web/fluid-images/ */
+img[width] {
+  width: auto; /* Defer to max-width */
+}
+img[width][height] {
+  height: auto; /* Preserve aspect ratio */
+}
+
+/* Let SVG scale without boundaries */
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }

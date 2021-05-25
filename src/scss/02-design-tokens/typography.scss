@@ -5,26 +5,27 @@
 $font-size-root: 16px;
 $line-height-root: 1.5;
 
-$font-family: 'Poppins', sans-serif;
+$font-family: 'Work Sans', sans-serif;
 
 $font-weight-values: (
-    light: 300,
     regular: 400,
-    semibold: 700,
-    bold: 800,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
 );
 
 
 /* || Typography scale */
 // https://www.codementor.io/@ricardozea/100-responsive-typography-system-using-a-modular-scale-s5rhft58g
 
-$font-size-xxxs: 0.694rem !default;
-$font-size-xxs: 0.833rem !default;
-$font-size-xs: 1rem !default;
-$font-size-sm: 1.2rem !default;
-$font-size-md: 1.44rem !default;
-$font-size-lg: 1.728rem !default;
-$font-size-xl: 2.074rem !default;
-$font-size-xxl: 2.488rem !default;
-$font-size-xxxl: 2.986rem !default;
+$font-size-1: 0.625rem !default;
+$font-size-2: 0.75rem !default;
+$font-size-3: 1rem !default;
+$font-size-4: 1.125rem !default;
+$font-size-5: 1.25rem !default;
+$font-size-6: 1.5rem !default;
+$font-size-7: 1.75rem !default;
+$font-size-8: 2rem !default;
+$font-size-9: 2.5rem !default;
+$font-size-10: 3.25rem !default;
 
